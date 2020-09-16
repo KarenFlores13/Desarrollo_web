@@ -1,0 +1,726 @@
+/* reglas estan conformadas por:
+selectores; formadas como identificar elemento de html
+declaraciones; acerca de todas lo que hacemos con los selectores
+propiedades; son particulares que podemos hacer con los elementos
+valores; son cosas que se espera recibir como variables las propiedades de forma correctas
+
+header es un selector
+{} es una declaración todo lo que se encuentra dentro de las llaves.
+background es una propiedad
+pink es un valor
+
+header {
+    background: pink
+} todo esta es una regla css
+
+
+selector de etiqueta header - section - article - nav
+selector descendente (hijo)
+body header div nav ol li a */
+
+/*header {
+    background: pink;
+}*/
+
+
+/* selector de clase . */
+/* . link*/
+
+
+/* selector de id # */
+/* #portafolio */
+
+/*Unidades de medida y colores
+Hay varias unidades de medida con las que se puede trabajar en CSS: %, em, rem, px, pt, fr, vw, vh
+Las medidas más comunes y utilizadas son los pixeles. Un píxel es la menor unidad homogénea en color que forma parte de una imagen digital. Es la unidad más práctica y fácil de utilizar y manipular, y es la que utilizaremos mayormente en este curso.
+
+Los colores en CSS pueden ser representados de al menos tres formas diferentes:
+
+Representados con palabras claves para cada color, como: red, green, blue, pink, yellow, black, etc.
+Usando la composición de tres colores (rojo, verde y azul): para esto podemos usar notación hexadecimal o las funciones rgb() y rgba().
+Usando la composición mediante valores de Matiz, Saturación y Luminosidad con: hls() y hlsa().
+Con respecto a los valores hexadecimales, cada color está representado por 6 digitos, que representan 3 pares de hexadecimales: FF - FF - FF (rojo, verde y azul), en el que cada par puede tomar valores hexadecimales entre 00 y FF. Cada uno equivale a valores decimales entre 0 y 255, donde 0 es la ausencia de ese color y 255 la mayor cantidad disponible. De esta manera cada color se forma por la combinación de diferentes proporciones de rojo, verde y azul.
+
+#000000 es equivalente a Negro
+#FF0000 es equivalente a Rojo
+#00FF00 es equivalente a Verde
+#0000FF es equivalente a Azul
+#FFFFFF es equivalente a Blanco
+
+En resumen
+Podemos representar un color de 3 formas dentro de CSS:
+
+Palabra clave: red, blue, pink, etc.
+Hexadecimales: 0123456789ABCDEF
+hls() hlsa()
+#000000 = Negro
+#FFFFFF = Blanco
+
+Se representan por grupos de 2 -> Red, Green, Blue
+#FF0000 = Rojo
+#00FF00 = Verde
+#0000FF = Azul
+
+Para obtener un color más exacto se utiliza rgb o rgba:
+rgb(0, 200, 145)
+rgba(0, 50, 70, 0.5) para obtener transparencia
+
+¿Qué es un pixel?
+La menor unidad homogenea en color que forma parte de una imagen digital.
+asignacion de tamaño como imagenes, texto, bordes, dimensiones, margenes y rellenos.
+
+
+Inspector de elementos
+Para ver y depurar el código de una página html, el navegador incluye una herramienta llamada Inspector de elementos, o simplemente inspector, que abre, en una sección de la ventana, una serie de espacios con información técnica muy detallada sobre todo lo que sucede en el DOM, incluídos los estilos que tienen aplicados cada uno de los elementos del html.
+
+La mayoría de los navegadores incluye algún tipo de Inspector, en el curso usamos Google Chrome, pero la misma herramienta (o similar) la encuentras en Firefox, Opera, Edge, etc.
+
+Utilizando el Inspector podemos hacer modificaciones (temporales) manualmente en el html de cualquier sitio web, consultar sus estilos y recursos enlazados, hacer pruebas en tiempo real con JavaScript, monitorear variables o eventos entre muchas otras tareas útiles para cualquier desarrollador.
+
+
+Tipos de textos personalizados
+Los tipos de texto, también conocidos como tipos de letras o fuentes, son el conjunto de diseños tipográficos que representan a cada una de las letras y los caracteres gráficos en el documento. Su nombre correcto es tipografía. Los diferentes tipos de fuente están basados en archivos que existen en cada sistema operativo.
+
+Algunos ejemplos de tipos de texto o fuentes, son:
+
+Arial
+Times New Roman
+Verdana
+DeJaVu
+Lato
+OpenSans
+Roboto
+CSS permite utilizar fuentes diferentes a las disponibles en el sistema operativo del cliente mediante la importación o el enlace a archivos de fuentes externas. Las más usadas son las que están disponibles a través del sitio web de Google Fonts.
+
+Al definir el tipo de texto asociado a una clase css con la propiedad font-family indicamos al navegador que debe intentar usar esa fuente en particular para darle la apariencia tipográfica a los textos de ese elemento html.
+
+
+ropiedades para los textos
+Además de todas las propiedades comunes que comparten los elementos estándar de html, como: display, position, margin, padding, top, left, right, bottom, border, etc., los elementos que admiten contenidos textuales aceptan una serie particular de propiedades entre las que se encuentran las siguientes:
+
+line-height para modificar el alto de linea
+font-size para modificar el tamaño de la fuente
+font-weight para modificar el tipo de fuente
+font-style para modificar el estilo de la fuente
+letter-spacing para modificar el espacio entre letras
+text-transform para transformar la fuente (mayusculas, minuculas, etc)
+text-decoration para moodificar la decoración de la fuente
+
+
+Dimensiones fijas para elementos
+Todos los elementos html comparten algunas propiedades de estilo, entre éstas se encuentran las propiedades relacionadas con sus dimensiones: width (ancho) y height (alto).
+
+Al manipular las propiedades de dimensiones hay que tener en cuenta que si los contenidos de los elementos que estamos estilizando, son más grandes que las dimensiones que hemos indicado, se pudieran generar resultados inesperados en la apariencia, como solapamiento o desbordamiento.
+
+ 
+Backgrounds de color e imagen
+background-color para agregar unn color de fondo
+color para agregar un color al texto
+text-decoration para modificar la decoración del texto
+background-image para agregar una imagen de fondo
+background-size para modificar el tamaño del background asignado
+background-repeat para modificar la repetición del backgound asignado
+background-position para modificar la posición del bakground asignado*
+
+Algunas de las propiedades de css relacionadas con la apariencia del fondo de los elementos son:
+
+background: con la que se puede indicar un color, o usada de manera extendida, puede incluir color de fondo, url de la imagen, posición y modo de repetición de la imagen.
+background-image: contiene la url que se usará como fondo del elemento.
+background-color: indica el color de fondo, se puede usar en combinación con la imagen.
+background-size: se puede indicar en valores de alto y ancho o en alguna de las palabras claves permitidas: cover o contain.
+background-position: indica la posición de la imagen dentro del elemento, puede indicarse en unidades o en palabras claves como center, left, top y right.
+background-repeat: indica el método de repetición de la imagen de fondo, puede ser: repeat, repeat-x, repeat-y o no-repeat.*/
+
+/*gris oscuro = #1d252c */
+/*gris claro = #626262 */
+/*background gris  = #1d2127 */
+/*celeste = #026fff */
+
+/*Bordes
+Todos los elementos html admiten la propiedad de css border, que define la apariencia que tendrá el contorno del componente.
+El borde puede ser de muchos estilos, y al igual que las propiedades margin y padding que aprenderás más adelante, a los bordes se les puede colocar estilos tanto de forma general con la propiedad border, como de acuerdo al lado del elemento que se indique: border-top, border-right, border-bottom y border-left.
+
+Con la propiedad border-radius se define el redondeado de las esquinas de los bordes.
+
+
+Márgenes
+Los márgenes en CSS son el espacio que separa a los elementos html entre sí. Hay elementos de html que traen márgenes predefinidos (por defecto) en los estilos propios del navegador como el caso de: 
+body, h1, h2, h3, h4, h5, h6, ol, ul, li, p, y muchos otros.
+
+Cuando hay dos márgenes de elementos diferentes que colindan entre sí, se presenta una situación llamada ““margin collapsing”” en la que el mayor margen de los dos se superpone al otro.
+
+Se puede asignar una medida de margin para los cuatro lados del elemento, o márgenes individuales para cada uno de los lados con: 
+margin-top 
+margin-right 
+margin-bottom  
+margin-left.
+
+Se puede centrar un elemento html colocándole el valor de margin: 0 auto, cuando dicho elemento tiene display block.
+
+
+Rellenos
+Así como el margen separa a los elementos html entre sí, la propiedad padding de relleno, permite definir una separación entre el contenido interno y el borde de un elemento.
+
+Al inspeccionar los elementos html en el navegador, se puede apreciar el margin con color naranja y el padding con color verde.
+
+Una forma de identificar cuándo es mejor usar margin o padding en un elemento, es evaluando la necesidad de usar borde o background, ya que son éstos: el borde y el background, los que realmente diferencian el uso de uno u otro.
+
+
+Modelo de caja
+El modelo de caja es un concepto teórico de css que representa a cada elemento html en base sus propiedades de: margin, border, padding y dimensiones (alto y ancho).
+Para visualizar un elemento html en su representación como modelo de caja debemos irnos a la parte baja de la sección styles del inspector de elementos, o en la sección llamada Computed.
+
+En el modelo de caja, el ancho total de un elemento html equivale a la sumatoria de los valores de: width, padding-left, padding-right, border-left-width, border-right-width. De manera similar aplica para el alto total de cada elemento. Aunque margin-left y margin-right, forman parte del modelo de caja, no se incluyen para el calculo del ancho total.
+
+Con la propiedad box-sizing, y en particular con el valor border-box de esta propiedad, podemos modificar el comportamiento del modelo de caja para que nuestro elemento nunca supere el tamaño máximo que le hayamos definido en width y height. Esta es la opción recomendada para trabajar.
+
+*/
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?k9iy50');
+    src:  url('../fonts/icomoon.eot?k9iy50#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?k9iy50') format('truetype'),
+      url('../fonts/icomoon.woff?k9iy50') format('woff'),
+      url('../fonts/icomoon.svg?k9iy50#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-menu:before {
+    content: "\e900";
+  }
+  
+
+
+
+
+body {
+    font-family: 'Source Sans Pro' , sans-serif;
+    font-weight: normal;
+    /*font-style: italic;*/
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: 'Fjalla One', sans-serif;
+}
+
+h1 {
+    font-size: 40px;
+    line-height: 1.5;
+    letter-spacing: -.2px;
+    color: white;
+    margin: 0;
+    /*margin: 100px 150px 70px 30px;*/
+    /*text-transform: uppercase;*/
+    /*text-decoration: dashed;*/
+
+}
+
+h1 strong {
+    color: #026fff;
+
+}
+
+h2 {
+    color: #026fff;
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro' , sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+.hero {
+    height: 300px;
+    /*background-image: url('../images/hero.jpg');*/
+    background-color: #1d2127;
+    /*background-size: 500px 300px;
+    background-repeat: no-repeat;
+    background-position-x: right;*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.hero-image {
+    object-fit: cover;
+}
+
+.portfolio {
+    background: #fafafa;
+    padding: 20px;
+    
+}
+
+.project {
+    /*border-top: 10px solid red;
+    border-right: 10px solid green;
+    border-left: 10px solid orange;
+    border-bottom: 10px solid pink;
+    color: royalblue;
+    border-top-color: red;
+    border-top-width: 15px;
+    border-top-style: solid;*/
+    border: 1px solid gray;
+    border-radius: 10px;
+    /*border-top-left-radius: 50px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;*/
+    margin: 10px;
+    margin-bottom: 15px;
+    /* margin-right
+    margin-left
+    margin-top */
+    padding: 20px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.project-course,
+.project-date,
+.project-url {
+    margin: 10px 0;
+}
+
+.project-description {
+    font-size: 20px;
+}
+.project strong {
+    font-family: 'Fjalla One', sans-serif;
+}
+/*.project-date{
+    margin: 10px 0;
+}*/
+
+.project-title {
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.project-details {
+    width: 50%;
+
+}
+
+.project-imageContainer {
+    width: 50%;
+}
+
+.project-imageContainer img {
+    max-width: 100%;
+}
+
+.header {
+    background-color: #1d2127;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.menu {
+    height: inherit;
+}
+
+.header ol {
+    display: flex;
+    height: inherit;
+}
+
+.header ol li {
+    height: inherit;
+}
+
+.header a {
+    color: white;
+    text-decoration: none;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+
+.flexbox {
+    display: flex;
+    /*flex-wrap: nowrap;*/
+    flex-wrap: wrap;
+    /*flex-direction: column;*/
+}
+
+.box {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    border: 1px solid red;
+
+    flex-shrink: 0;
+}
+
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+figure {
+    margin: 0;
+}
+
+.footer {
+    color: white;
+    background-color: #1d2127;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer img {
+    vertical-align: middle;
+}
+
+.footer a {
+    color: white;
+}
+.event-list {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.event {
+    margin: 1%;
+    width: 48%;
+    flex-shrink: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #f4fbff;
+}
+
+.event img {
+    width: 480px;
+    height: 200px;
+    object-fit: cover;
+}
+.event-detail {
+    margin: 20px 40px;
+    margin-top: -40px;
+    background-color: white;
+    position: relative;
+    padding: 20px;
+    text-align: center;
+}
+.event-description {
+    text-align: left;
+}
+.event-url {
+    border: 1px solid #056fff;
+    padding: 5px 20px;
+    text-decoration: none;
+    color: #056fff;
+    border-radius: 5px;
+}
+.event-list-title {
+    margin-left: 20px;
+}
+
+.contact {
+    background-color: #056fff;
+    color: white;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.social {
+   
+}
+
+.social-link {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    background-size: 50px 50px;
+}
+
+.social-link.twitter {
+    background-image: url(../images/twitter.svg);
+}
+.social-link.facebook {
+    background-image: url(../images/facebook.svg);
+}
+.social-link.github {
+    background-image: url(../images/github.svg);
+}
+.social-link.instagram {
+    background-image: url(../images/instagram.svg);
+}
+
+.form-email input {
+    border-color: gray;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 10px 20px 10px 25px;
+    background-image: url(../images/envelope.svg);
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 5px;
+}
+
+.form-email button {
+    display: block;
+    background: transparent;
+    color: white;
+    padding: 10px 0;
+    border-radius: 5px;
+    width: 100px;
+    margin-top: 10px;
+}
+
+.container {
+    /*border: 1px solid red;*/
+    max-width: 1000px;
+    width: 100%;
+    flex: 1;
+    margin: 0 auto;
+    display: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+    height: inherit; 
+    flex-wrap: inherit;
+}
+
+.form-email h3 {
+    font-family: 'Source Sans Pro' , sans-serif;
+}
+
+.burger-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, .8);
+    display: none;
+    line-height: 40px;
+    text-align: center;
+    position: fixed;
+    z-index: 4;
+    left: 5px;
+    top: 5px;
+    color: white;
+    
+}
+
+/*desktop first que empieces desde el MQ mas grande*/
+
+@media screen and (max-width: 1024px) {
+    .container {
+        padding: 0 1em;
+    }
+    .hero {
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        padding: 2em;
+    }
+    .hero-image {
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+    }
+    h1 {
+        font-size: 2em;
+        z-index: 2;
+    }
+}
+.html-video {
+    width: 100%;
+    height: auto;
+    /* max-width: 100%; */
+}
+.youtube-video {
+    /* width: 100%;
+    height: auto; */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+}
+.flexible-video {
+    width: 100%;
+    height: 0;
+    padding-top: 56.25%;
+    background: blue;
+    position: relative;
+}
+
+@media screen and (max-width: 767px) {
+
+    .burger-button {
+        display: block;
+    }    
+    
+   .header {
+       display: block;
+       height: auto;
+   }
+   .header ol {
+       display: block;
+   }
+   .header ol li {
+       height: 50px;
+   }
+   .header a {
+       justify-content: center;
+       height: 40px;
+       font-size: 2em;
+       text-decoration: underline;
+       margin-bottom: .5em;
+   }
+   .header .logo {
+       text-align: center;
+   }
+   .menu {
+       position: fixed;
+       background: rgb(5, 111, 255, .9);
+       z-index: 3;
+       top: 0;
+       left: -100vw;
+       width: 100vw;
+       /* height: 100vh; */
+       bottom: 0;
+       display: flex;
+       align-items: center;
+       justify-content: center;  
+       transition: .3s;    
+   }
+   .menu.is-active {
+       left: 0;
+   }
+
+
+   .project {
+       display: block;
+   }
+   .project-imageContainer {
+       width: auto;
+       text-align: center;
+   }
+   .project-details {
+       width: auto;
+       /* font-size: 10px; */
+   }
+   .project-course, .project-date, .project-url {
+       margin: .3em 0;
+   }
+   .project-title {
+        font-size: 1.5em;
+        margin-bottom: .3em;
+   }
+   .project-url {
+        font-size: 1em;
+   }
+   .project-course {
+        font-size: .7em;
+   }
+   .project-date {
+        font-size: 1em;
+   }
+
+   .project-description {
+        font-size: .8em;
+   } 
+   .event {
+       width: auto;
+       flex-shrink: initial;
+   }
+   .event img {
+       width: 100%;
+   }
+}
+
+@media screen and (max-width: 480px) {
+    .h1 {
+        font-size: 1.5em;
+    }
+
+    .project-details {
+        font-size: 12px;
+    }
+
+    .event-detail {
+        /* 1em = 16px */
+        margin: -2em .5em .5em;
+        padding: 1em;
+    }
+    .contact {
+        height: auto;
+        padding: 1.5em 0;
+        text-align: center;
+        display: block;
+    }
+    .form-email button {
+        margin: 1em auto;
+    }
+    .form-email h3 {
+        margin-top: 0;
+    }
+    .footer {
+        display: block;
+        text-align: center;
+        border: 1px solid transparent;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .h1 {
+        font-size: 1.2em;
+    }
+    .hero {
+        padding: 2em 1em;
+    }
+}
